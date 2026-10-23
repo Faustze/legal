@@ -11,9 +11,11 @@
   table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
   th, td { border: 1px solid #30363d; padding: 6px 10px; text-align: left; vertical-align: top; }
   th { background: #161b22; }
+  .back { display: inline-block; margin-bottom: 16px; text-decoration: none; }
 </style>
 </head>
 <body>
+{% if page.url != "/" %}<a class="back" href="{{ '/' | relative_url }}">← Назад</a>{% endif %}
 {{ content }}
 </body>
 </html>
